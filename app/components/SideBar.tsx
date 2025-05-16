@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import {
   LayoutDashboard,
@@ -18,7 +19,15 @@ import {
   LogOut,
 } from 'lucide-react';
 
-const menuItems = [
+type MenuItem = {
+  name?: string;
+  icon?: React.ElementType;
+  href?: string;
+  type?: 'label';
+  text?: string;
+};
+
+const menuItems: MenuItem[] = [
   { name: 'Dashboard', icon: LayoutDashboard, href: '/' },
   { type: 'label', text: 'Main Menu' },
   { name: 'Branches', icon: Building, href: '/branches' },
@@ -43,9 +52,8 @@ export default function Sidebar() {
       <div>
         {/* Logo */}
         <div className="mb-8">
-
           <Link href="/" className="text-xl font-bold text-center block text-blue-800">
-            <img src="/LAPO_Logo.png" alt="Lapo Logo" className="h-10 mx-auto mb-2" />
+            <Image src="/LAPO_Logo.png" alt="Lapo Logo" width={40} height={40} className="h-10 mx-auto mb-2" />
             <span className="text-sm block text-gray-700 text-center">Card Issuance</span>
           </Link>
         </div>
@@ -62,6 +70,8 @@ export default function Sidebar() {
             }
             
             const { name, icon: Icon, href } = item;
+            if (!Icon || !name) return null;
+            
             return (
               <Link
                 key={name}
@@ -82,16 +92,18 @@ export default function Sidebar() {
 
       {/* Footer */}
       <div className="space-y-4">
-        <button className="flex items-center gap-4 py-4 mt-30 justify-center text-sm text-red-600 hover:underline">
+        <button 
+          className="flex items-center gap-4 py-4 mt-30 justify-center text-sm text-red-600 hover:underline"
+          onClick={() => console.log('Logout clicked')}
+        >
           <LogOut className="w-5 h-5 ml-5" />
           Logout
         </button>
         <div className="text-s text-gray-500 flex items-center justify-center">
           <span className="mr-5">Powered by</span>
-          <img src="/Vector.png" alt="Cardinfos Logo" className="h-5 inline-block mr-7" />
+          <Image src="/Vector.png" alt="Cardinfos Logo" width={70} height={10} className="h-9 mr-7" />
         </div>
       </div>
     </div>
   );
-
 }
