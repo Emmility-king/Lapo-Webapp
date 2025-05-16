@@ -52,8 +52,8 @@ export default function Sidebar() {
         {/* Logo */}
         <div className="mb-8">
           <Link href="/" className="text-xl font-bold text-center block text-blue-800">
-            <Image src="/LAPO_Logo.png" alt="Lapo Logo" width={40} height={40} className="h-10 mx-auto mb-2" />
-            <span className="text-sm block text-gray-700 text-center">Card Issuance</span>
+            <Image src="/LAPO_Logo.png" alt="Lapo Logo" width={100} height={100} className="h-9 " />
+            {/* <span className="text-sm block text-gray-700 items-start">Card Issuance</span> */}
           </Link>
         </div>
 
