@@ -43,6 +43,7 @@ export default function Sidebar() {
       <div>
         {/* Logo */}
         <div className="mb-8">
+
           <Link href="/" className="text-xl font-bold text-center block text-blue-800">
             <img src="/LAPO_Logo.png" alt="Lapo Logo" className="h-10 mx-auto mb-2" />
             <span className="text-sm block text-gray-700 text-center">Card Issuance</span>
@@ -64,7 +65,7 @@ export default function Sidebar() {
             return (
               <Link
                 key={name}
-                href={href}
+                href={href || '/'}
                 className={`flex items-center gap-3 px-4 py-2 rounded-lg text-sm font-medium transition-all ${
                   pathname === href
                     ? 'bg-white text-blue-700 shadow'
@@ -92,4 +93,5 @@ export default function Sidebar() {
       </div>
     </div>
   );
+
 }
