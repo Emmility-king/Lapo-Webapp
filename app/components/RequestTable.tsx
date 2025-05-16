@@ -1,11 +1,11 @@
 'use client'
 
 const requests = [
-  { branch: 'Corporate', type: 'Instant', quantity: 15, status: 'In Progress', view: 'View' },
-  { branch: 'Retail', type: 'Personalized', quantity: 10, status: 'Pending', view: 'View' },
-  { branch: 'Corporate', type: 'Instant', quantity: 20, status: 'Ready', view: 'View' },
-  { branch: 'Retail', type: 'Personalized', quantity: 5, status: 'In Progress', view: 'View' },
-  { branch: 'Corporate', type: 'Instant', quantity: 12, status: 'Acknowledged', view: 'View' },
+  { branch: 'Corporate', type: 'Instant',      quantity: 15, status: 'In Progress',  view: 'View' },
+  { branch: 'Retail',    type: 'Personalized', quantity: 10, status: 'Pending',      view: 'View' },
+  { branch: 'Corporate', type: 'Instant',      quantity: 20, status: 'Ready',        view: 'View' },
+  { branch: 'Retail',    type: 'Personalized', quantity: 5,  status: 'In Progress',  view: 'View' },
+  { branch: 'Corporate', type: 'Instant',      quantity: 12, status: 'Acknowledged', view: 'View' },
 ];
 
 export default function RequestTable() {
