@@ -43,7 +43,6 @@ const menuItems: MenuItem[] = [
   { name: 'Trail', icon: Settings, href: '/trail' },
   { name: 'Account', icon: User, href: '/account' },
 ];
-
 export default function Sidebar() {
   const pathname = usePathname();
 
