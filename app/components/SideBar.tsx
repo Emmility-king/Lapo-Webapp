@@ -47,7 +47,7 @@ export default function Sidebar() {
   const pathname = usePathname();
 
   return (
-    <div className="h-screen w-65 bg-white flex flex-col justify-between border-r p-6 relative">
+    <div className="w-65 bg-white flex flex-col justify-between border-r p-6 relative">
       <div>
         {/* Logo */}
         <div className="mb-8">
